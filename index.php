@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use VK\Client\VKApiClient;
 use VK\Exceptions\VKApiException;
@@ -39,7 +39,7 @@ if (null == $result){
 
 try{
     $fileName = $user_id."_friends_and_followers";
-    $file = fopen('../resource/'.$fileName, 'w+');
+    $file = fopen('resource/'.$fileName, 'w+');
 
     if (!$file){
         throw new Exception("Не удалось открыть файл для записи");
